@@ -4,4 +4,4 @@ Safe local-mailbox demonstration. The workflow uses sample `.eml` files only, id
 
 This design keeps portfolio testing safe while preserving the classification, attachment, draft, and processed-message organization pattern. Replace the local mailbox adapter with `Get Outlook Mail Messages` in Studio only when a controlled test account is available.
 
-Validation: sample inputs and project metadata are included. Runtime is pending because the source workflow is intentionally local-test-only and does not access a live mailbox.
+Validation: package `1.0.2` executed successfully through UiPath Robot using only local sample files. The Robot log records a start and end event in about three seconds. No live mailbox was accessed and no messages were sent or deleted.

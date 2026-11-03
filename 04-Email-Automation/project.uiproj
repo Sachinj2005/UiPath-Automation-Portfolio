@@ -1,6 +1,6 @@
 {
-  "Name": "02-File-Management-Automation",
+  "Name": "04-Email-Automation",
   "ProjectType": "Process",
-  "Description": "Creates category folders, sorts files by extension, compresses the organized output, and reports completion.",
+  "Description": "Processes safe local email fixtures without sending or deleting messages.",
   "MainFile": "Main.xaml"
 }

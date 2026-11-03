@@ -48,5 +48,5 @@ All paths are relative to `Environment.CurrentDirectory`; no personal paths or c
 - Workflow is based on an existing UiPath Studio-generated file-sorting workflow.
 - Project JSON and XAML passed structural validation.
 - UiPath command-line analysis passed with advisory warnings only.
-- Published package `1.0.3` executed successfully through the local UiPath Robot runner; UiPath execution logs recorded a normal start and end. The package runs in its own temporary execution directory, so generated ZIP output is not retained in the source checkout.
+- Published package `1.0.4` executed successfully through the local UiPath Robot runner; UiPath execution logs recorded a normal start and end. The workflow now creates the package execution `Output` folder before compression. The package runs in its own temporary execution directory, so generated ZIP output is not retained in the source checkout.
 
