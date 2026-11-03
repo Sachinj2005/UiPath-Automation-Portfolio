@@ -5,4 +5,4 @@ UiPath Studio Windows workflow based on Studio-generated PowerPoint and Excel ac
 Input: `Template/Gradebook.xlsx` and `Template/PresentationTemplate.pptx`.
 Output: `Output/GeneratedPresentation.pptx` and `Output/GeneratedPresentation.pdf`.
 
-Validation: the template is now a genuine native `.pptx` file. Package publication still reports invalid activity configuration, so no Robot runtime claim or output verification is made.
+Validation: the template is a valid native `.pptx` package. The missing `InsertSlide.LayoutName` was corrected; package `1.0.4` publishes successfully. Robot reaches the PowerPoint scope but fails with `TYPE_E_CANTLOADLIBRARY` while loading the PowerPoint COM type library. No presentation/PDF output was verified; Office repair is required before retesting.
