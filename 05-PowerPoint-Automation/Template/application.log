@@ -1,0 +1,6 @@
+2026-11-03 09:00:00 INFO Application started
+2026-11-03 09:01:12 INFO User login succeeded
+2026-11-03 09:02:44 WARNING Retry threshold near limit
+2026-11-03 09:03:10 ERROR Database connection failed
+2026-11-03 09:04:02 ERROR Request timeout
+2026-11-03 09:05:11 INFO Application stopped
