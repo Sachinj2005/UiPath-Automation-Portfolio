@@ -5,7 +5,7 @@ Recruiter-friendly UiPath projects demonstrating data processing, file operation
 | Project | Focus | Status |
 |---|---|---|
 | [01 Excel Data Automation](01-Excel-Data-Automation/README.md) | Filter, sort, write, and export student scores | In progress |
-| 02 File Management | Organize files and create an archive | Planned |
+| [02 File Management](02-File-Management-Automation/README.md) | Organize files and create an archive | Runtime validated |
 | 03 Word Report Generator | Populate a Word template and export PDF | Planned |
 | 04 Email Automation | Process test emails and draft replies safely | Planned |
 | 05 PowerPoint Automation | Build a presentation from sample data | Planned |

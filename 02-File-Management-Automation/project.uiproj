@@ -1,0 +1,6 @@
+{
+  "Name": "02-File-Management-Automation",
+  "ProjectType": "Process",
+  "Description": "Creates category folders, sorts files by extension, compresses the organized output, and reports completion.",
+  "MainFile": "Main.xaml"
+}
