@@ -45,5 +45,6 @@ The workflow uses `Environment.CurrentDirectory` and relative `Input`/`Output` f
 - Project created using UiPath Studio.
 - Main workflow is based on Studio-generated modern Excel activities.
 - `project.json` and `Main.xaml` passed structural validation.
-- UiPath execution is still pending final package restore and workbook run verification; no successful execution is claimed yet.
+- UiPath command-line analysis passed with advisory warnings only.
+- A published package was started through the local Robot runner, but the executor hung before producing the CSV; no successful execution is claimed yet.
 
