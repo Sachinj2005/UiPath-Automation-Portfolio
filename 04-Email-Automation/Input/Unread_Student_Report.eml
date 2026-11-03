@@ -1,0 +1,5 @@
+From: student@example.com
+Subject: Student report request
+X-Test-Mailbox: true
+
+Safe local test message.

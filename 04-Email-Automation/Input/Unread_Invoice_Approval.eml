@@ -1,0 +1,6 @@
+From: test.sender@example.com
+Subject: Invoice approval required
+X-Test-Mailbox: true
+Attachment: Invoice_Sample.pdf
+
+Safe local test message. Do not send.
