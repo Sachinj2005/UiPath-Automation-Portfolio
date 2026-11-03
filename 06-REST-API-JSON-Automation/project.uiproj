@@ -1,0 +1,6 @@
+{
+  "Name": "06-REST-API-JSON-Automation",
+  "ProjectType": "Process",
+  "Description": "Process JSON user data and generate validated CSV reports.",
+  "MainFile": "Main.xaml"
+}

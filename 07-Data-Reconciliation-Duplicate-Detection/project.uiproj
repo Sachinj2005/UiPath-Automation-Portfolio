@@ -1,0 +1,6 @@
+{
+  "Name": "07-Data-Reconciliation-Duplicate-Detection",
+  "ProjectType": "Process",
+  "Description": "Reconcile CSV datasets and report data quality differences.",
+  "MainFile": "Main.xaml"
+}
