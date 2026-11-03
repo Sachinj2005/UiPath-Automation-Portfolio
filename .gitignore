@@ -1,0 +1,16 @@
+# UiPath generated and local files
+.local/
+.project/
+.tmh/
+.settings/
+*.user
+*.suo
+*.nupkg
+*.log
+
+# Generated outputs and potentially sensitive local data
+**/Output/*
+!**/Output/.gitkeep
+**/Attachments/*
+**/Credentials/*
+
