@@ -1,6 +1,6 @@
 {
   "Name": "01-Excel-Data-Automation",
   "ProjectType": "Process",
-  "Description": "Blank Process",
+  "Description": "Process student CSV records, filter and sort scores, and generate summary outputs.",
   "MainFile": "Main.xaml"
 }

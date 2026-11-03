@@ -46,5 +46,5 @@ The workflow uses `Environment.CurrentDirectory` and relative `Input`/`Output` f
 - Main workflow is based on Studio-generated modern Excel activities.
 - `project.json` and `Main.xaml` passed structural validation.
 - UiPath command-line analysis passed with advisory warnings only.
-- The sample `.xlsx` is a valid Office package. Robot package `1.0.2` now ends with `ExcelApplicationCard: Error opening workbook` and recommends UiPath's Microsoft Office Interop Repair Tool. Excel COM opening also hangs outside UiPath. No CSV was verified; an Office repair action is required before retesting.
+- Replacement package `2.0.2` executed successfully through UiPath Robot. Verified outputs contain three students above 75 sorted 91, 86, 79, plus the expected statistics in `Summary.txt`.
 

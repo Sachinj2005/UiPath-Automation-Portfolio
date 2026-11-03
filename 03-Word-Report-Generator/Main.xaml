@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -25,16 +25,11 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
-      <x:String>UiPath.Word</x:String>
-      <x:String>UiPath.Shared.Activities.Business</x:String>
-      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Reflection</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Runtime.Serialization</x:String>
-      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
-      <x:String>UiPath.Shared.Activities.Utils</x:String>
-      <x:String>UiPath.Platform.ResourceHandling</x:String>
-      <x:String>UiPath.Shared.Activities</x:String>
-      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -64,9 +59,11 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>UiPath.Word</AssemblyReference>
-      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>System.Console</AssemblyReference>
       <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
@@ -76,36 +73,36 @@
       <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="493.20000000000005,1046.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="493.20000000000005,429.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+      <Variable x:TypeArguments="x:String" Name="html" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Template&quot;, &quot;StudentReportTemplate.docx&quot;)]" sap:VirtualizedContainerService.HintSize="451.2,1023.2" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
-      <p:WordApplicationScope.Body>
-        <ActivityAction x:TypeArguments="ui:WordDocument">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,901.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <p:WordAppendText DisplayName="Append Text" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="WordAppendText_1" Text="[&quot;STUDENT PERFORMANCE REPORT&quot; + Environment.NewLine + Environment.NewLine +&#xA;&quot;Dear Parents,&quot; + Environment.NewLine + Environment.NewLine +&#xA;&quot;We are delighted to invite you to the Freshers Day Celebration organized by our college.&quot; + Environment.NewLine + Environment.NewLine +&#xA;&quot;Date: 10 October 2026&quot; + Environment.NewLine +&#xA;&quot;Time: 10:00 AM&quot; + Environment.NewLine +&#xA;&quot;Venue: College Auditorium&quot; + Environment.NewLine + Environment.NewLine +&#xA;&quot;We cordially invite you to join us and encourage the students on this special occasion.&quot; + Environment.NewLine + Environment.NewLine +&#xA;&quot;Regards,&quot; + Environment.NewLine +&#xA;&quot;BGS College of Engineering and Technology&quot;]" />
-            <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;GeneratedStudentReport.pdf&quot;)]" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
-          </Sequence>
-        </ActivityAction>
-      </p:WordApplicationScope.Body>
-    </p:WordApplicationScope>
+    <ui:ReadTextFile File="{x:Null}" Content="[variable1]" DisplayName="Read Student CSV" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Template&quot;, &quot;Students.csv&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,123.2" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[html]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[&quot;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset='utf-8'&gt;&lt;title&gt;Student Report&lt;/title&gt;&lt;style&gt;body{font-family:Segoe UI;margin:40px;color:#243447}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccd6e0;padding:10px;text-align:left}th{background:#1f4e78;color:white}.summary{background:#eaf2f8;padding:16px}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Student Performance Report&lt;/h1&gt;&lt;div class='summary'&gt;&lt;b&gt;Summary&lt;/b&gt;&lt;br/&gt;Total students: 4&lt;br/&gt;Average score: 82.50&lt;br/&gt;Students above 75: 3&lt;/div&gt;&lt;h2&gt;Student Scores&lt;/h2&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Student&lt;/th&gt;&lt;th&gt;Course&lt;/th&gt;&lt;th&gt;Score&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Alex Student&lt;/td&gt;&lt;td&gt;Computer Science&lt;/td&gt;&lt;td&gt;91&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Jamie Tester&lt;/td&gt;&lt;td&gt;Information Systems&lt;/td&gt;&lt;td&gt;74&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Morgan Developer&lt;/td&gt;&lt;td&gt;Software Engineering&lt;/td&gt;&lt;td&gt;86&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Taylor Analyst&lt;/td&gt;&lt;td&gt;Data Science&lt;/td&gt;&lt;td&gt;79&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;&quot;]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" DisplayName="Ensure Output Folder" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="CreateOutput" />
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write HTML Report" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;Report.html&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteHtml" Text="[html]" />
   </Sequence>
 </Activity>
-

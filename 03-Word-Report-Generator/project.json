@@ -1,17 +1,16 @@
 {
-  "name": "word dynamic reports",
+  "name": "03-HTML-Report-Generator",
   "projectId": "8c0c3d1c-2d5b-4bb7-b8a4-000000000003",
-  "description": "Blank Process",
+  "description": "Generate a styled HTML student report from CSV data.",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.System.Activities": "[25.10.3]",
-    "UiPath.Word.Activities": "[2.6.0-preview]"
+    "UiPath.System.Activities": "[25.10.3]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "26.0.180.0",
-  "projectVersion": "1.0.2",
+  "projectVersion": "2.0.2",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

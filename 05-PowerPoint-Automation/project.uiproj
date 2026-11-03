@@ -1,6 +1,6 @@
 {
-  "Name": "ppt2.o",
+  "Name": "05-Log-Analyzer",
   "ProjectType": "Process",
-  "Description": "Blank Process",
+  "Description": "Analyze application logs and generate severity reports.",
   "MainFile": "Main.xaml"
 }

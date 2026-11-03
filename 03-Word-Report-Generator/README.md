@@ -1,8 +1,8 @@
-# Word Report Generator
+# HTML Report Generator
 
-UiPath Studio Windows workflow based on the Studio-generated Word activities. It opens a predefined template, replaces report placeholders, inserts a data table, saves the Word report, and exports a PDF.
+UiPath Studio Windows workflow using only System activities. It reads CSV student data and writes a styled HTML report with headings, a table, CSS, and summary statistics. It does not use Word or Office.
 
-Input: `Template/StudentReportTemplate.docx` and `Template/StudentData.xlsx`.
-Output: `Output/GeneratedStudentReport.docx` and `Output/GeneratedStudentReport.pdf`.
+Input: `Template/Students.csv`.
+Output: `Output/Report.html`.
 
-Validation: the template is a valid native `.docx` package and opens manually through Word COM. Robot package `1.0.2` still reports `Word Application Scope: Error opening document` and recommends the Microsoft Office Interop Repair Tool. No report/PDF output was verified; Office repair is required before retesting.
+Validation: replacement package `2.0.2` executed successfully through UiPath Robot. `Output/Report.html` was verified as a readable HTML document containing the styled table and summary.

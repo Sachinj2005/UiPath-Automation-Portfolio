@@ -1,6 +1,6 @@
 {
-  "Name": "word dynamic reports",
+  "Name": "03-HTML-Report-Generator",
   "ProjectType": "Process",
-  "Description": "Blank Process",
+  "Description": "Generate a styled HTML student report from CSV data.",
   "MainFile": "Main.xaml"
 }
