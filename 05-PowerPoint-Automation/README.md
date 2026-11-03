@@ -5,4 +5,4 @@ UiPath Studio Windows workflow based on Studio-generated PowerPoint and Excel ac
 Input: `Template/Gradebook.xlsx` and `Template/PresentationTemplate.pptx`.
 Output: `Output/GeneratedPresentation.pptx` and `Output/GeneratedPresentation.pdf`.
 
-Validation: `Main.xaml` passed XML parsing and UiPath command-line structural analysis. Runtime is pending because the checked-in presentation is a safe placeholder fixture rather than a native PowerPoint document; replace it with a real `.pptx` template in Studio before attended execution.
+Validation: the template is now a genuine native `.pptx` file. Package publication still reports invalid activity configuration, so no Robot runtime claim or output verification is made.

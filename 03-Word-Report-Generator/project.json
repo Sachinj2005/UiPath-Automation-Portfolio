@@ -1,8 +1,59 @@
 {
-  "name": "03-Word-Report-Generator",
+  "name": "word dynamic reports",
   "projectId": "8c0c3d1c-2d5b-4bb7-b8a4-000000000003",
-  "description": "Generate a Word student report from a template and export it to PDF.",
+  "description": "Blank Process",
   "main": "Main.xaml",
-  "dependencies": {"UiPath.System.Activities":"[25.10.3]","UiPath.Word.Activities":"[2.6.0-preview]"},
-  "schemaVersion":"4.0","studioVersion":"26.0.180.0","projectVersion":"1.0.0","targetFramework":"Windows","expressionLanguage":"VisualBasic"
+  "dependencies": {
+    "UiPath.System.Activities": "[25.10.3]",
+    "UiPath.Word.Activities": "[2.6.0-preview]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.180.0",
+  "projectVersion": "1.0.2",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false,
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "e6c0bcff-000f-4343-a246-ef9364564a9b",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
 }

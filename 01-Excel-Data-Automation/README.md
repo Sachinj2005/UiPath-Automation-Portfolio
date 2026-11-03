@@ -46,5 +46,5 @@ The workflow uses `Environment.CurrentDirectory` and relative `Input`/`Output` f
 - Main workflow is based on Studio-generated modern Excel activities.
 - `project.json` and `Main.xaml` passed structural validation.
 - UiPath command-line analysis passed with advisory warnings only.
-- A published package was started through the local Robot runner, but the executor hung before producing the CSV; no successful execution is claimed yet.
+- Package `1.0.2` was started through UiPath Robot, but the execution log has no matching end event and no CSV was verified. No successful runtime claim is made.
 

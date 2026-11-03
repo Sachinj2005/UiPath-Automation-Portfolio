@@ -118,54 +118,6 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <ueab:ReadRangeX Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveTo="[dt_Students]" DisplayName="Read Student Scores" sap:VirtualizedContainerService.HintSize="451.2,168.8" sap2010:WorkflowViewState.IdRef="ReadRangeX_1" />
                     <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;FilteredStudents&quot;)]" Source="[dt_Students]" DisplayName="Write Filtered Students" sap:VirtualizedContainerService.HintSize="451.2,220.8" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" />
-                    <ueab:SortX Range="[Excel.Sheet(&quot;Sheet1&quot;)]" DisplayName="Sort Eligible Students" HasHeaders="True" sap:VirtualizedContainerService.HintSize="451.2,823.2" sap2010:WorkflowViewState.IdRef="SortX_1">
-                      <ueab:SortX.Body>
-                        <ActivityAction>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,614.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ueab:SortColumnX ColumnName="Score" DisplayName="Sort By Score" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="SortColumnX_1" SortDirection="Descending" />
-                            <ueab:SortColumnX ColumnName="StudentName" DisplayName="Secondary Sort" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="SortColumnX_2" SortDirection="Ascending" />
-                            <ueab:FilterX ColumnName="Score" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" ClearFilter="False" DisplayName="Filter Scores Above 75" HasHeaders="True" sap:VirtualizedContainerService.HintSize="416,309.6" sap2010:WorkflowViewState.IdRef="FilterX_1">
-                              <ueab:FilterX.FilterArgument>
-                                <ueabf:FilterArgument Mode="Basic">
-                                  <ueabf:FilterArgument.AdvancedFiltersArgument>
-                                    <ueabf:AdvancedFilterArgument LogicalOperator="And">
-                                      <ueabf:AdvancedFilterArgument.Condition1>
-                                        <ueabf:AdvancedFilterCondition Operator="NONE">
-                                          <ueabf:AdvancedFilterCondition.Value>
-                                            <InArgument x:TypeArguments="x:String" />
-                                          </ueabf:AdvancedFilterCondition.Value>
-                                        </ueabf:AdvancedFilterCondition>
-                                      </ueabf:AdvancedFilterArgument.Condition1>
-                                      <ueabf:AdvancedFilterArgument.Condition2>
-                                        <ueabf:AdvancedFilterCondition Operator="NONE">
-                                          <ueabf:AdvancedFilterCondition.Value>
-                                            <InArgument x:TypeArguments="x:String" />
-                                          </ueabf:AdvancedFilterCondition.Value>
-                                        </ueabf:AdvancedFilterCondition>
-                                      </ueabf:AdvancedFilterArgument.Condition2>
-                                    </ueabf:AdvancedFilterArgument>
-                                  </ueabf:FilterArgument.AdvancedFiltersArgument>
-                                  <ueabf:FilterArgument.BasicFiltersArgument>
-                                    <ueabf:BasicFilterArgument>
-                                      <ueabf:BasicFilterArgument.BasicFilters>
-                                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                          <InArgument x:TypeArguments="x:String">[&quot;&gt;75&quot;]</InArgument>
-                                        </scg:List>
-                                      </ueabf:BasicFilterArgument.BasicFilters>
-                                    </ueabf:BasicFilterArgument>
-                                  </ueabf:FilterArgument.BasicFiltersArgument>
-                                </ueabf:FilterArgument>
-                              </ueab:FilterX.FilterArgument>
-                            </ueab:FilterX>
-                          </Sequence>
-                        </ActivityAction>
-                      </ueab:SortX.Body>
-                    </ueab:SortX>
                     <ueab:ExportExcelToCsvX FilePath="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;EligibleStudents.csv&quot;)]" TargetRange="[Excel.Sheet(&quot;FilteredStudents&quot;)]" DisplayName="Export Eligible Students to CSV" sap:VirtualizedContainerService.HintSize="451.2,165.6" sap2010:WorkflowViewState.IdRef="ExportExcelToCsvX_1" />
                   </Sequence>
                 </ActivityAction>
@@ -183,3 +135,4 @@
     </ueab:ExcelProcessScopeX>
   </Sequence>
 </Activity>
+
