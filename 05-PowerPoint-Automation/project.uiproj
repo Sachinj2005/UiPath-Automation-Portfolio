@@ -1,0 +1,6 @@
+{
+  "Name": "ppt2.o",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Main.xaml"
+}
