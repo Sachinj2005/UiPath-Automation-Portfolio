@@ -1,108 +1,36 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
-      <x:String>System.Activities</x:String>
-      <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
-      <x:String>Microsoft.VisualBasic</x:String>
-      <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
-      <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Data</x:String>
-      <x:String>System.Diagnostics</x:String>
-      <x:String>System.Drawing</x:String>
       <x:String>System.IO</x:String>
       <x:String>System.Linq</x:String>
-      <x:String>System.Net.Mail</x:String>
-      <x:String>System.Xml</x:String>
-      <x:String>System.Xml.Linq</x:String>
-      <x:String>UiPath.Core</x:String>
-      <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
-      <x:String>UiPath.Platform.ResourceHandling</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>System.Linq.Expressions</x:String>
-      <x:String>System.Runtime.Serialization</x:String>
-      <x:String>System.Numerics</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System.Data.Common</AssemblyReference>
-      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Drawing.Common</AssemblyReference>
-      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
-      <AssemblyReference>System.Linq</AssemblyReference>
-      <AssemblyReference>System.Net.Mail</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>System.CodeDom</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="493.20000000000005,429.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="HTML Report Generator">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="variable1" />
+      <Variable x:TypeArguments="x:String" Name="inputText" />
       <Variable x:TypeArguments="x:String" Name="html" />
     </Sequence.Variables>
-    <sap:WorkflowViewStateService.ViewState>
-      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-      </scg:Dictionary>
-    </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadTextFile File="{x:Null}" Content="[variable1]" DisplayName="Read Student CSV" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Template&quot;, &quot;Students.csv&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,123.2" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[html]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[&quot;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset='utf-8'&gt;&lt;title&gt;Student Report&lt;/title&gt;&lt;style&gt;body{font-family:Segoe UI;margin:40px;color:#243447}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccd6e0;padding:10px;text-align:left}th{background:#1f4e78;color:white}.summary{background:#eaf2f8;padding:16px}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Student Performance Report&lt;/h1&gt;&lt;div class='summary'&gt;&lt;b&gt;Summary&lt;/b&gt;&lt;br/&gt;Total students: 4&lt;br/&gt;Average score: 82.50&lt;br/&gt;Students above 75: 3&lt;/div&gt;&lt;h2&gt;Student Scores&lt;/h2&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Student&lt;/th&gt;&lt;th&gt;Course&lt;/th&gt;&lt;th&gt;Score&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Alex Student&lt;/td&gt;&lt;td&gt;Computer Science&lt;/td&gt;&lt;td&gt;91&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Jamie Tester&lt;/td&gt;&lt;td&gt;Information Systems&lt;/td&gt;&lt;td&gt;74&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Morgan Developer&lt;/td&gt;&lt;td&gt;Software Engineering&lt;/td&gt;&lt;td&gt;86&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Taylor Analyst&lt;/td&gt;&lt;td&gt;Data Science&lt;/td&gt;&lt;td&gt;79&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;&quot;]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" DisplayName="Ensure Output Folder" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="CreateOutput" />
-    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write HTML Report" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;Report.html&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteHtml" Text="[html]" />
+    <ui:ReadTextFile File="{x:Null}" Content="[inputText]" DisplayName="Read Report CSV" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Template&quot;, &quot;Students.csv&quot;)]" />
+    <ui:InvokeCode Code="Dim lines = inputText.Replace(vbCrLf, vbLf).Replace(vbCr, vbLf).Split(New String() {vbLf}, StringSplitOptions.RemoveEmptyEntries)&#xA;Dim records As New List(Of String())&#xA;Dim validScores As New List(Of Double)&#xA;&#xA;For i As Integer = 1 To lines.Length - 1&#xA;    Dim fields = lines(i).Split(&quot;,&quot;c)&#xA;    If fields.Length &gt;= 3 Then&#xA;        Dim score As Double&#xA;        If Double.TryParse(fields(2).Trim(), Globalization.NumberStyles.Float, Globalization.CultureInfo.InvariantCulture, score) Then&#xA;            validScores.Add(score)&#xA;            records.Add(New String() {fields(0).Trim(), fields(1).Trim(), score.ToString(&quot;0.##&quot;, Globalization.CultureInfo.InvariantCulture)})&#xA;        End If&#xA;    End If&#xA;Next&#xA;&#xA;records.Sort(Function(left As String(), right As String())&#xA;                 Return Double.Parse(right(2), Globalization.CultureInfo.InvariantCulture).CompareTo(Double.Parse(left(2), Globalization.CultureInfo.InvariantCulture))&#xA;             End Function)&#xA;&#xA;Dim average As Double = 0&#xA;Dim highest As Double = 0&#xA;Dim lowest As Double = 0&#xA;If validScores.Count &gt; 0 Then&#xA;    Dim totalScore As Double = 0&#xA;    highest = validScores(0)&#xA;    lowest = validScores(0)&#xA;    For Each currentScore As Double In validScores&#xA;        totalScore += currentScore&#xA;        If currentScore &gt; highest Then highest = currentScore&#xA;        If currentScore &lt; lowest Then lowest = currentScore&#xA;    Next&#xA;    average = totalScore / validScores.Count&#xA;End If&#xA;&#xA;Dim htmlBuilder As New System.Text.StringBuilder()&#xA;htmlBuilder.AppendLine(&quot;&lt;!doctype html&gt;&quot;)&#xA;htmlBuilder.AppendLine(&quot;&lt;html lang=&quot;&quot;en&quot;&quot;&gt;&quot;)&#xA;htmlBuilder.AppendLine(&quot;&lt;head&gt;&lt;meta charset=&quot;&quot;utf-8&quot;&quot;&gt;&lt;meta name=&quot;&quot;viewport&quot;&quot; content=&quot;&quot;width=device-width, initial-scale=1&quot;&quot;&gt;&lt;title&gt;Student Performance Report&lt;/title&gt;&quot;)&#xA;htmlBuilder.AppendLine(&quot;&lt;style&gt;body{font-family:Segoe UI,Arial,sans-serif;background:#f4f7fb;color:#1f2937;margin:0;padding:32px}main{max-width:960px;margin:auto;background:#fff;border-radius:14px;padding:32px;box-shadow:0 8px 24px rgba(15,23,42,.08)}h1{color:#123b63;margin-top:0}table{border-collapse:collapse;width:100%;margin-top:24px}th{background:#123b63;color:#fff;text-align:left;padding:12px}td{border-bottom:1px solid #e5e7eb;padding:12px}.cards{display:flex;gap:16px;flex-wrap:wrap}.card{background:#eaf2fb;border-left:4px solid #2b6cb0;padding:14px 18px;border-radius:8px;min-width:140px}.label{font-size:12px;color:#475569}.value{font-size:22px;font-weight:600}&lt;/style&gt;&lt;/head&gt;&quot;)&#xA;htmlBuilder.AppendLine(&quot;&lt;body&gt;&lt;main&gt;&lt;h1&gt;Student Performance Report&lt;/h1&gt;&lt;p&gt;Generated dynamically from the supplied CSV input.&lt;/p&gt;&quot;)&#xA;htmlBuilder.AppendLine(&quot;&lt;section class=&quot;&quot;cards&quot;&quot;&gt;&quot;)&#xA;htmlBuilder.AppendLine(&quot;&lt;div class=&quot;&quot;card&quot;&quot;&gt;&lt;div class=&quot;&quot;label&quot;&quot;&gt;Records&lt;/div&gt;&lt;div class=&quot;&quot;value&quot;&quot;&gt;&quot; &amp; records.Count.ToString() &amp; &quot;&lt;/div&gt;&lt;/div&gt;&quot;)&#xA;htmlBuilder.AppendLine(&quot;&lt;div class=&quot;&quot;card&quot;&quot;&gt;&lt;div class=&quot;&quot;label&quot;&quot;&gt;Average score&lt;/div&gt;&lt;div class=&quot;&quot;value&quot;&quot;&gt;&quot; &amp; If(validScores.Count = 0, &quot;N/A&quot;, average.ToString(&quot;0.00&quot;, Globalization.CultureInfo.InvariantCulture)) &amp; &quot;&lt;/div&gt;&lt;/div&gt;&quot;)&#xA;htmlBuilder.AppendLine(&quot;&lt;div class=&quot;&quot;card&quot;&quot;&gt;&lt;div class=&quot;&quot;label&quot;&quot;&gt;Highest score&lt;/div&gt;&lt;div class=&quot;&quot;value&quot;&quot;&gt;&quot; &amp; If(validScores.Count = 0, &quot;N/A&quot;, highest.ToString(&quot;0.##&quot;, Globalization.CultureInfo.InvariantCulture)) &amp; &quot;&lt;/div&gt;&lt;/div&gt;&quot;)&#xA;htmlBuilder.AppendLine(&quot;&lt;/section&gt;&lt;h2&gt;Student details&lt;/h2&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Student&lt;/th&gt;&lt;th&gt;Course&lt;/th&gt;&lt;th&gt;Score&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&quot;)&#xA;For Each record As String() In records&#xA;    htmlBuilder.AppendLine(&quot;&lt;tr&gt;&lt;td&gt;&quot; &amp; System.Net.WebUtility.HtmlEncode(record(0)) &amp; &quot;&lt;/td&gt;&lt;td&gt;&quot; &amp; System.Net.WebUtility.HtmlEncode(record(1)) &amp; &quot;&lt;/td&gt;&lt;td&gt;&quot; &amp; record(2) &amp; &quot;&lt;/td&gt;&lt;/tr&gt;&quot;)&#xA;Next&#xA;htmlBuilder.AppendLine(&quot;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;strong&gt;Lowest score:&lt;/strong&gt; &quot; &amp; If(validScores.Count = 0, &quot;N/A&quot;, lowest.ToString(&quot;0.##&quot;, Globalization.CultureInfo.InvariantCulture)) &amp; &quot;&lt;/p&gt;&lt;/main&gt;&lt;/body&gt;&lt;/html&gt;&quot;)&#xA;html = htmlBuilder.ToString()" DisplayName="Build Dynamic HTML Report">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="inputText">[inputText]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="html">[html]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" DisplayName="Ensure Output Folder" />
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write HTML Report" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;Report.html&quot;)]" Text="[html]" />
   </Sequence>
 </Activity>
+

@@ -1,114 +1,39 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
-      <x:String>System.Activities</x:String>
-      <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
-      <x:String>Microsoft.VisualBasic</x:String>
-      <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
-      <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Data</x:String>
-      <x:String>System.Diagnostics</x:String>
-      <x:String>System.Drawing</x:String>
       <x:String>System.IO</x:String>
       <x:String>System.Linq</x:String>
-      <x:String>System.Net.Mail</x:String>
-      <x:String>System.Xml</x:String>
-      <x:String>System.Xml.Linq</x:String>
-      <x:String>UiPath.Core</x:String>
-      <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
-      <x:String>UiPath.Platform.ResourceHandling</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>System.Linq.Expressions</x:String>
-      <x:String>System.Runtime.Serialization</x:String>
-      <x:String>System.Numerics</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System.Data.Common</AssemblyReference>
-      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Drawing.Common</AssemblyReference>
-      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
-      <AssemblyReference>System.Linq</AssemblyReference>
-      <AssemblyReference>System.Net.Mail</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>System.CodeDom</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="493.20000000000005,429.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CSV Data Processing Automation">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="variable1" />
-      <Variable x:TypeArguments="x:String" Name="filtered" />
+      <Variable x:TypeArguments="x:String" Name="inputText" />
+      <Variable x:TypeArguments="x:String" Name="filteredCsv" />
       <Variable x:TypeArguments="x:String" Name="summary" />
     </Sequence.Variables>
-    <sap:WorkflowViewStateService.ViewState>
-      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-      </scg:Dictionary>
-    </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadTextFile File="{x:Null}" Content="[variable1]" DisplayName="Read Student CSV" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Input&quot;, &quot;Students.csv&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,123.2" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[filtered]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">["StudentName,Course,Score" + Environment.NewLine + "Alex Student,Computer Science,91" + Environment.NewLine + "Morgan Developer,Software Engineering,86" + Environment.NewLine + "Taylor Analyst,Data Science,79"]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_Summary">
-      <Assign.To><OutArgument x:TypeArguments="x:String">[summary]</OutArgument></Assign.To>
-      <Assign.Value><InArgument x:TypeArguments="x:String">["Total records: 4" + Environment.NewLine + "Above 75: 3" + Environment.NewLine + "Average score: 82.50" + Environment.NewLine + "Highest score: 91" + Environment.NewLine + "Lowest score: 74"]</InArgument></Assign.Value>
-    </Assign>
-    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" DisplayName="Ensure Output Folder" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="CreateOutput" />
-    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Filtered CSV" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;FilteredStudents.csv&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteFiltered" Text="[filtered]" />
-    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Summary" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;Summary.txt&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteSummary" Text="[summary]" />
+    <ui:ReadTextFile File="{x:Null}" Content="[inputText]" DisplayName="Read Student CSV" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Input&quot;, &quot;Students.csv&quot;)]" />
+    <ui:InvokeCode Code="Dim lines = inputText.Replace(vbCrLf, vbLf).Replace(vbCr, vbLf).Split(New String() {vbLf}, StringSplitOptions.RemoveEmptyEntries)&#xA;Dim totalRecords As Integer = 0&#xA;Dim validScores As New List(Of Double)&#xA;Dim rows As New List(Of String)&#xA;&#xA;For i As Integer = 1 To lines.Length - 1&#xA;    Dim fields = lines(i).Split(&quot;,&quot;c)&#xA;    If fields.Length &gt;= 3 Then&#xA;        totalRecords += 1&#xA;        Dim score As Double&#xA;        If Double.TryParse(fields(2).Trim(), Globalization.NumberStyles.Float, Globalization.CultureInfo.InvariantCulture, score) Then&#xA;            validScores.Add(score)&#xA;            If score &gt; 75 Then&#xA;                rows.Add(fields(0).Trim() &amp; &quot;,&quot; &amp; fields(1).Trim() &amp; &quot;,&quot; &amp; score.ToString(&quot;0.##&quot;, Globalization.CultureInfo.InvariantCulture))&#xA;            End If&#xA;        End If&#xA;    End If&#xA;Next&#xA;&#xA;rows.Sort(Function(left As String, right As String)&#xA;              Dim leftScore = Double.Parse(left.Substring(left.LastIndexOf(&quot;,&quot;c) + 1), Globalization.CultureInfo.InvariantCulture)&#xA;              Dim rightScore = Double.Parse(right.Substring(right.LastIndexOf(&quot;,&quot;c) + 1), Globalization.CultureInfo.InvariantCulture)&#xA;              Return rightScore.CompareTo(leftScore)&#xA;          End Function)&#xA;&#xA;filteredCsv = &quot;StudentName,Course,Score&quot;&#xA;If rows.Count &gt; 0 Then&#xA;    filteredCsv &amp;= Environment.NewLine &amp; String.Join(Environment.NewLine, rows)&#xA;End If&#xA;&#xA;If validScores.Count &gt; 0 Then&#xA;    Dim totalScore As Double = 0&#xA;    Dim highest As Double = validScores(0)&#xA;    Dim lowest As Double = validScores(0)&#xA;    For Each currentScore As Double In validScores&#xA;        totalScore += currentScore&#xA;        If currentScore &gt; highest Then highest = currentScore&#xA;        If currentScore &lt; lowest Then lowest = currentScore&#xA;    Next&#xA;    summary = &quot;Total records: &quot; &amp; totalRecords.ToString() &amp; Environment.NewLine &amp;&#xA;              &quot;Valid score records: &quot; &amp; validScores.Count.ToString() &amp; Environment.NewLine &amp;&#xA;              &quot;Above 75: &quot; &amp; rows.Count.ToString() &amp; Environment.NewLine &amp;&#xA;              &quot;Average score: &quot; &amp; (totalScore / validScores.Count).ToString(&quot;0.00&quot;, Globalization.CultureInfo.InvariantCulture) &amp; Environment.NewLine &amp;&#xA;              &quot;Highest score: &quot; &amp; highest.ToString(&quot;0.##&quot;, Globalization.CultureInfo.InvariantCulture) &amp; Environment.NewLine &amp;&#xA;              &quot;Lowest score: &quot; &amp; lowest.ToString(&quot;0.##&quot;, Globalization.CultureInfo.InvariantCulture)&#xA;Else&#xA;    summary = &quot;Total records: &quot; &amp; totalRecords.ToString() &amp; Environment.NewLine &amp;&#xA;              &quot;Valid score records: 0&quot; &amp; Environment.NewLine &amp;&#xA;              &quot;Above 75: 0&quot; &amp; Environment.NewLine &amp;&#xA;              &quot;Average score: N/A&quot; &amp; Environment.NewLine &amp;&#xA;              &quot;Highest score: N/A&quot; &amp; Environment.NewLine &amp;&#xA;              &quot;Lowest score: N/A&quot;&#xA;End If" DisplayName="Filter Sort And Calculate Statistics">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="inputText">[inputText]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="filteredCsv">[filteredCsv]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="summary">[summary]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" DisplayName="Ensure Output Folder" />
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Filtered Students CSV" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;FilteredStudents.csv&quot;)]" Text="[filteredCsv]" />
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Statistics Summary" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;Summary.txt&quot;)]" Text="[summary]" />
   </Sequence>
 </Activity>
+

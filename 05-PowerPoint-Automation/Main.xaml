@@ -1,114 +1,39 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
-      <x:String>System.Activities</x:String>
-      <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
-      <x:String>Microsoft.VisualBasic</x:String>
-      <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
-      <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Data</x:String>
-      <x:String>System.Diagnostics</x:String>
-      <x:String>System.Drawing</x:String>
       <x:String>System.IO</x:String>
       <x:String>System.Linq</x:String>
-      <x:String>System.Net.Mail</x:String>
-      <x:String>System.Xml</x:String>
-      <x:String>System.Xml.Linq</x:String>
-      <x:String>UiPath.Core</x:String>
-      <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
-      <x:String>UiPath.Platform.ResourceHandling</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>System.Linq.Expressions</x:String>
-      <x:String>System.Runtime.Serialization</x:String>
-      <x:String>System.Numerics</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System.Data.Common</AssemblyReference>
-      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Drawing.Common</AssemblyReference>
-      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
-      <AssemblyReference>System.Linq</AssemblyReference>
-      <AssemblyReference>System.Net.Mail</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>System.CodeDom</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="493.20000000000005,429.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Log Analyzer Automation">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="variable1" />
-      <Variable x:TypeArguments="x:String" Name="errors" />
-      <Variable x:TypeArguments="x:String" Name="summary" />
+      <Variable x:TypeArguments="x:String" Name="inputText" />
+      <Variable x:TypeArguments="x:String" Name="errorReport" />
+      <Variable x:TypeArguments="x:String" Name="summaryCsv" />
     </Sequence.Variables>
-    <sap:WorkflowViewStateService.ViewState>
-      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-      </scg:Dictionary>
-    </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadTextFile File="{x:Null}" Content="[variable1]" DisplayName="Read Application Log" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Template&quot;, &quot;application.log&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,123.2" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[errors]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[&quot;2026-11-03 09:03:10 ERROR Database connection failed&quot; + Environment.NewLine + &quot;2026-11-03 09:04:02 ERROR Request timeout&quot;]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_Summary">
-      <Assign.To><OutArgument x:TypeArguments="x:String">[summary]</OutArgument></Assign.To>
-      <Assign.Value><InArgument x:TypeArguments="x:String">[&quot;Severity,Count&quot; + Environment.NewLine + &quot;INFO,3&quot; + Environment.NewLine + &quot;WARNING,1&quot; + Environment.NewLine + &quot;ERROR,2&quot;]</InArgument></Assign.Value>
-    </Assign>
-    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" DisplayName="Ensure Output Folder" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="CreateOutput" />
-    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Error Report" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;ErrorReport.txt&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteErrors" Text="[errors]" />
-    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Log Summary" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;LogSummary.csv&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteSummary" Text="[summary]" />
+    <ui:ReadTextFile File="{x:Null}" Content="[inputText]" DisplayName="Read Application Log" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Template&quot;, &quot;application.log&quot;)]" />
+    <ui:InvokeCode Code="Dim lines = inputText.Replace(vbCrLf, vbLf).Replace(vbCr, vbLf).Split(New String() {vbLf}, StringSplitOptions.RemoveEmptyEntries)&#xA;Dim infoCount As Integer = 0&#xA;Dim warningCount As Integer = 0&#xA;Dim errorCount As Integer = 0&#xA;Dim errors As New List(Of String)&#xA;&#xA;For Each line As String In lines&#xA;    Dim tokens = line.Trim().Split(New Char() {&quot; &quot;c}, StringSplitOptions.RemoveEmptyEntries)&#xA;    Dim severity As String = &quot;&quot;&#xA;    For Each token As String In tokens&#xA;        Dim normalizedToken = token.Trim().ToUpperInvariant()&#xA;        If normalizedToken = &quot;INFO&quot; OrElse normalizedToken = &quot;WARNING&quot; OrElse normalizedToken = &quot;ERROR&quot; Then&#xA;            severity = normalizedToken&#xA;            Exit For&#xA;        End If&#xA;    Next&#xA;    If severity = &quot;INFO&quot; Then&#xA;        infoCount += 1&#xA;    ElseIf severity = &quot;WARNING&quot; Then&#xA;        warningCount += 1&#xA;    ElseIf severity = &quot;ERROR&quot; Then&#xA;        errorCount += 1&#xA;        errors.Add(line.Trim())&#xA;    End If&#xA;Next&#xA;&#xA;If errors.Count = 0 Then&#xA;    errorReport = &quot;No ERROR entries were found.&quot;&#xA;Else&#xA;    errorReport = String.Join(Environment.NewLine, errors)&#xA;End If&#xA;summaryCsv = &quot;Severity,Count&quot; &amp; Environment.NewLine &amp;&#xA;             &quot;INFO,&quot; &amp; infoCount.ToString() &amp; Environment.NewLine &amp;&#xA;             &quot;WARNING,&quot; &amp; warningCount.ToString() &amp; Environment.NewLine &amp;&#xA;             &quot;ERROR,&quot; &amp; errorCount.ToString()" DisplayName="Analyze Log Entries Dynamically">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="inputText">[inputText]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="errorReport">[errorReport]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="summaryCsv">[summaryCsv]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" DisplayName="Ensure Output Folder" />
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Error Report" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;ErrorReport.txt&quot;)]" Text="[errorReport]" />
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Severity Summary" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;LogSummary.csv&quot;)]" Text="[summaryCsv]" />
   </Sequence>
 </Activity>
+

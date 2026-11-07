@@ -1,6 +1,6 @@
 {
-  "Name": "01-Excel-Data-Automation",
+  "Name": "01-CSV-Data-Processing",
   "ProjectType": "Process",
-  "Description": "Process student CSV records, filter and sort scores, and generate summary outputs.",
+  "Description": "Dynamically process student CSV records, filter and sort scores, and generate summary outputs.",
   "MainFile": "Main.xaml"
 }

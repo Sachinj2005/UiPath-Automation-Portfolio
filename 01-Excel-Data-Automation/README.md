@@ -1,50 +1,31 @@
-# Project 1 — Excel Data Processing Automation
+# Project 1 — CSV Data Processing Automation
 
-## Project Overview
+## Overview
 
-A UiPath Windows project that processes student scores from an Excel workbook, filters records above 75, sorts the eligible results by score, writes the result to a worksheet, and exports a CSV file.
+A portable UiPath Windows workflow that reads student records from a CSV file at runtime, filters scores above 75, sorts the qualifying records from highest to lowest, and calculates summary statistics. The historical folder name is retained for portfolio compatibility; the workflow does not use Excel or Office activities.
 
-## Problem Statement
+## Inputs and outputs
 
-Manual review of student score sheets is repetitive and error-prone. This workflow standardizes the filtering and export process.
+- Input: `Input/Students.csv`
+- Alternate verification input: `TestData/Students_Alternate.csv`
+- Outputs: `Output/FilteredStudents.csv` and `Output/Summary.txt`
 
-## Technologies Used
+## Activities and implementation
 
-- UiPath Studio Community 2026.0.180 STS
-- Windows project, Visual Basic expressions
-- `UiPath.System.Activities` 25.10.3
-- `UiPath.Excel.Activities` 3.6.0-preview
+- Read Text File
+- Invoke Code (VB.NET parsing, filtering, sorting, and statistics)
+- Create Directory
+- Write Text File
 
-## Activities Used
+The CSV is read on every run. Student names, courses, scores, totals, averages, and sorted rows are derived from the current input; no student values are embedded in the workflow. Invalid or non-numeric score rows are excluded from the valid-score statistics.
 
-- Excel Process Scope
-- Use Excel File
-- Read Range
-- Filter
-- Sort Range / Sort By Column
-- Write DataTable to Excel
-- Export to CSV
+## Run
 
-## Input and Output
+Open `project.json` in UiPath Studio Community 2026.0.180 STS and run `Main.xaml`, or publish the Windows project and execute it with UiPath Robot. The workflow uses `Environment.CurrentDirectory` and relative folders.
 
-- Input: `Input/Students.xlsx`
-- Excel output sheet: `FilteredStudents`
-- CSV output: `Output/EligibleStudents.csv`
+## Verified runtime tests
 
-## Setup and Execution
-
-1. Open `project.json` in UiPath Studio.
-2. Confirm the Excel activity package is restored.
-3. Run `Main.xaml` from the project folder.
-4. Review `Output/EligibleStudents.csv`.
-
-The workflow uses `Environment.CurrentDirectory` and relative `Input`/`Output` folders so it remains portable when cloned.
-
-## Validation Status
-
-- Project created using UiPath Studio.
-- Main workflow is based on Studio-generated modern Excel activities.
-- `project.json` and `Main.xaml` passed structural validation.
-- UiPath command-line analysis passed with advisory warnings only.
-- Replacement package `2.0.2` executed successfully through UiPath Robot. Verified outputs contain three students above 75 sorted 91, 86, 79, plus the expected statistics in `Summary.txt`.
+- Robot package 3.1.0 with the default fixture: PASS. Generated three rows above 75 in descending order (91, 86, 79); average 82.50.
+- Robot package 3.1.1 with `Students_Alternate.csv`: PASS. Generated Chris Developer 95, Aditi Rao 88, Dina QA 76; average 78.20.
+- Both runs completed through the installed UiPath Robot with exit code 0.
 

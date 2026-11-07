@@ -1,0 +1,6 @@
+From: billing.test@example.com
+Subject: Invoice review needed
+X-Test-Mailbox: true
+Attachment: Invoice_Alternate.pdf
+
+Safe alternate local test message. Do not send.

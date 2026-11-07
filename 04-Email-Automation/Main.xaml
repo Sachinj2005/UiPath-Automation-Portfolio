@@ -1,98 +1,39 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
-      <x:String>System.Activities</x:String>
-      <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
-      <x:String>Microsoft.VisualBasic</x:String>
-      <x:String>Microsoft.VisualBasic.Activities</x:String>
+    <sco:Collection x:TypeArguments="x:String" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib">
       <x:String>System</x:String>
-      <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Data</x:String>
-      <x:String>System.Diagnostics</x:String>
-      <x:String>System.Drawing</x:String>
       <x:String>System.IO</x:String>
       <x:String>System.Linq</x:String>
-      <x:String>System.Net.Mail</x:String>
-      <x:String>System.Xml</x:String>
-      <x:String>System.Xml.Linq</x:String>
-      <x:String>UiPath.Core</x:String>
-      <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
-      <x:String>System.Runtime.Serialization</x:String>
-      <x:String>UiPath.Shared.Activities.Business</x:String>
-      <x:String>System.Linq.Expressions</x:String>
-      <x:String>UiPath.Platform.ResourceHandling</x:String>
-      <x:String>UiPath.Shared.Activities</x:String>
-      <x:String>System.ComponentModel</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
+    <sco:Collection x:TypeArguments="AssemblyReference" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib">
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System.Data.Common</AssemblyReference>
-      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Drawing.Common</AssemblyReference>
-      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
-      <AssemblyReference>System.Linq</AssemblyReference>
-      <AssemblyReference>System.Net.Mail</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
-      <AssemblyReference>System.IO.Packaging</AssemblyReference>
-      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
-      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="553.6,1466.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <sap:WorkflowViewStateService.ViewState>
-      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-      </scg:Dictionary>
-    </sap:WorkflowViewStateService.ViewState>
-    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Organized&quot;, &quot;PDF&quot;)]" DisplayName="Create PDF Folder" sap:VirtualizedContainerService.HintSize="483.2,122.4" sap2010:WorkflowViewState.IdRef="CreateDirectory_PDF" />
-    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Organized&quot;, &quot;Word&quot;)]" DisplayName="Create Word Folder" sap:VirtualizedContainerService.HintSize="483.2,122.4" sap2010:WorkflowViewState.IdRef="CreateDirectory_Word" />
-    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Organized&quot;, &quot;Excel&quot;)]" DisplayName="Create Excel Folder" sap:VirtualizedContainerService.HintSize="483.2,122.4" sap2010:WorkflowViewState.IdRef="CreateDirectory_Excel" />
-    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Organized&quot;, &quot;Images&quot;)]" DisplayName="Create Images Folder" sap:VirtualizedContainerService.HintSize="483.2,122.4" sap2010:WorkflowViewState.IdRef="CreateDirectory_Images" />
-    <ui:ForEachFileX DisplayName="Sort Input Files" Folder="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Input&quot;)]" sap:VirtualizedContainerService.HintSize="553.6,1443.2" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+  <Sequence DisplayName="Safe Local Email Automation">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="mailText" />
+      <Variable x:TypeArguments="x:Boolean" Name="isMatch" />
+      <Variable x:TypeArguments="x:String" Name="draftText" />
+      <Variable x:TypeArguments="x:String" Name="draftFileName" />
+      <Variable x:TypeArguments="x:String" Name="processedFileName" />
+      <Variable x:TypeArguments="x:Int32" Name="processedCount" />
+      <Variable x:TypeArguments="x:Int32" Name="keywordMatches" />
+      <Variable x:TypeArguments="x:Int32" Name="attachmentsSaved" />
+      <Variable x:TypeArguments="x:Int32" Name="draftsCreated" />
+      <Variable x:TypeArguments="x:String" Name="summary" />
+    </Sequence.Variables>
+    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;Attachments&quot;)]" DisplayName="Create Attachment Folder" />
+    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;Drafts&quot;)]" DisplayName="Create Draft Folder" />
+    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;Processed&quot;)]" DisplayName="Create Processed Folder" />
+    <ui:ForEachFileX DisplayName="Read Local Unread Messages" Folder="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Input&quot;)]" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
       <ui:ForEachFileX.Body>
         <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
           <ActivityAction.Argument1>
@@ -101,81 +42,57 @@
           <ActivityAction.Argument2>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
           </ActivityAction.Argument2>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,1156.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[CurrentFile.Extension.ToLower = &quot;.pdf&quot;]" sap:VirtualizedContainerService.HintSize="486.4,1096.8" sap2010:WorkflowViewState.IdRef="If_1">
+          <Sequence DisplayName="Process Local Message">
+            <If Condition="[CurrentFile.Extension.ToLowerInvariant = &quot;.eml&quot;]">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484.8,243.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:MoveFile ContinueOnError="False" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Organized&quot;, &quot;PDF&quot;, CurrentFile.Name)]" DisplayName="Move PDF File" sap:VirtualizedContainerService.HintSize="451.2,183.2" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[CurrentFile.FullName]" Overwrite="True" />
+                <Sequence DisplayName="Process EML">
+                  <ui:ReadTextFile File="{x:Null}" Content="[mailText]" DisplayName="Read EML Message" FileName="[CurrentFile.FullName]" />
+                  <ui:InvokeCode Code="Dim normalized = mailText.Replace(vbCrLf, vbLf).Replace(vbCr, vbLf)&#xA;Dim lines = normalized.Split(New String() {vbLf}, StringSplitOptions.None)&#xA;Dim sender As String = &quot;&quot;&#xA;Dim subject As String = &quot;&quot;&#xA;Dim attachmentName As String = &quot;&quot;&#xA;&#xA;For Each line As String In lines&#xA;    If line.StartsWith(&quot;From:&quot;, StringComparison.OrdinalIgnoreCase) Then&#xA;        sender = line.Substring(5).Trim()&#xA;    ElseIf line.StartsWith(&quot;Subject:&quot;, StringComparison.OrdinalIgnoreCase) Then&#xA;        subject = line.Substring(8).Trim()&#xA;    ElseIf line.StartsWith(&quot;Attachment:&quot;, StringComparison.OrdinalIgnoreCase) Then&#xA;        attachmentName = line.Substring(11).Trim()&#xA;    End If&#xA;Next&#xA;&#xA;Dim isTestMail = normalized.IndexOf(&quot;X-Test-Mailbox: true&quot;, StringComparison.OrdinalIgnoreCase) &gt;= 0&#xA;Dim isUnread = fileName.StartsWith(&quot;Unread_&quot;, StringComparison.OrdinalIgnoreCase)&#xA;Dim subjectLower = subject.ToLowerInvariant()&#xA;Dim keywordHit = subjectLower.Contains(&quot;invoice&quot;) OrElse subjectLower.Contains(&quot;approval&quot;) OrElse subjectLower.Contains(&quot;student&quot;) OrElse subjectLower.Contains(&quot;report&quot;) OrElse subjectLower.Contains(&quot;request&quot;)&#xA;isMatch = isTestMail AndAlso isUnread AndAlso keywordHit&#xA;draftText = &quot;&quot;&#xA;draftFileName = System.IO.Path.GetFileNameWithoutExtension(fileName) &amp; &quot;_ReplyDraft.txt&quot;&#xA;processedFileName = fileName&#xA;&#xA;If isTestMail AndAlso isUnread Then&#xA;    processedCount += 1&#xA;    If attachmentName &lt;&gt; &quot;&quot; Then&#xA;        Dim attachmentSource = System.IO.Path.Combine(inputDirectory, attachmentName)&#xA;        If System.IO.File.Exists(attachmentSource) Then&#xA;            System.IO.File.Copy(attachmentSource, System.IO.Path.Combine(outputRoot, &quot;Attachments&quot;, System.IO.Path.GetFileName(attachmentName)), True)&#xA;            attachmentsSaved += 1&#xA;        End If&#xA;    End If&#xA;    System.IO.File.Copy(filePath, System.IO.Path.Combine(outputRoot, &quot;Processed&quot;, fileName), True)&#xA;End If&#xA;&#xA;If isMatch Then&#xA;    keywordMatches += 1&#xA;    draftsCreated += 1&#xA;    draftText = &quot;To: &quot; &amp; sender &amp; Environment.NewLine &amp;&#xA;                &quot;Subject: Re: &quot; &amp; subject &amp; Environment.NewLine &amp; Environment.NewLine &amp;&#xA;                &quot;Draft reply only - this message was prepared from safe local test data and was not sent.&quot;&#xA;End If" DisplayName="Classify Message And Prepare Draft">
+                    <ui:InvokeCode.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="mailText">[mailText]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="fileName">[CurrentFile.Name]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="filePath">[CurrentFile.FullName]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="inputDirectory">[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Input&quot;)]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="outputRoot">[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]</InArgument>
+                      <OutArgument x:TypeArguments="x:Boolean" x:Key="isMatch">[isMatch]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="draftText">[draftText]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="draftFileName">[draftFileName]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="processedFileName">[processedFileName]</OutArgument>
+                      <InOutArgument x:TypeArguments="x:Int32" x:Key="processedCount">[processedCount]</InOutArgument>
+                      <InOutArgument x:TypeArguments="x:Int32" x:Key="keywordMatches">[keywordMatches]</InOutArgument>
+                      <InOutArgument x:TypeArguments="x:Int32" x:Key="attachmentsSaved">[attachmentsSaved]</InOutArgument>
+                      <InOutArgument x:TypeArguments="x:Int32" x:Key="draftsCreated">[draftsCreated]</InOutArgument>
+                    </ui:InvokeCode.Arguments>
+                  </ui:InvokeCode>
+                  <If Condition="[isMatch]">
+                    <If.Then>
+                      <Sequence DisplayName="Write Reply Draft">
+                        <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Save Reply Draft" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;Drafts&quot;, draftFileName)]" Text="[draftText]" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence />
+                    </If.Else>
+                  </If>
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484.8,724" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:IfElseIfV2 Condition="[CurrentFile.Extension.ToLower=&quot;.docx&quot; OrElse CurrentFile.Extension.ToLower=&quot;.doc&quot;]" DisplayName="Word File?" sap:VirtualizedContainerService.HintSize="451.2,664" sap2010:WorkflowViewState.IdRef="IfElseIfV2_2">
-                    <ui:IfElseIfV2.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,243.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[CurrentFile.Extension.ToLower=&quot;.xlsx&quot; OrElse CurrentFile.Extension.ToLower=&quot;.xls&quot; OrElse CurrentFile.Extension.ToLower=&quot;.csv&quot;]" DisplayName="Excel File?" sap:VirtualizedContainerService.HintSize="449.6,388" sap2010:WorkflowViewState.IdRef="If_Excel">
-                          <If.Then>
-                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="448,168.8">
-                              <ui:MoveFile ContinueOnError="False" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Organized&quot;, &quot;Excel&quot;, CurrentFile.Name)]" DisplayName="Move Excel File" sap:VirtualizedContainerService.HintSize="416,183.2" sap2010:WorkflowViewState.IdRef="MoveFile_Excel" Path="[CurrentFile.FullName]" Overwrite="True" />
-                            </Sequence>
-                          </If.Then>
-                          <If.Else>
-                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="448,168.8">
-                              <ui:MoveFile ContinueOnError="False" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Organized&quot;, &quot;Images&quot;, CurrentFile.Name)]" DisplayName="Move Image File" sap:VirtualizedContainerService.HintSize="416,183.2" sap2010:WorkflowViewState.IdRef="MoveFile_Image" Path="[CurrentFile.FullName]" Overwrite="True" />
-                            </Sequence>
-                          </If.Else>
-                        </If>
-                      </Sequence>
-                    </ui:IfElseIfV2.Else>
-                    <ui:IfElseIfV2.ElseIfs>
-                      <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
-                    </ui:IfElseIfV2.ElseIfs>
-                    <ui:IfElseIfV2.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,243.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:MoveFile ContinueOnError="False" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Organized&quot;, &quot;Word&quot;, CurrentFile.Name)]" DisplayName="Move Word File" sap:VirtualizedContainerService.HintSize="416,183.2" sap2010:WorkflowViewState.IdRef="MoveFile_2" Path="[CurrentFile.FullName]" Overwrite="True" />
-                      </Sequence>
-                    </ui:IfElseIfV2.Then>
-                  </ui:IfElseIfV2>
-                </Sequence>
+                <Sequence />
               </If.Else>
             </If>
           </Sequence>
         </ActivityAction>
       </ui:ForEachFileX.Body>
     </ui:ForEachFileX>
-    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" DisplayName="Ensure Output Folder" sap:VirtualizedContainerService.HintSize="483.2,122.4" sap2010:WorkflowViewState.IdRef="CreateDirectory_Output" />
-    <uascw:CompressFiles CompressedFileInfo="{x:Null}" CompressedResource="{x:Null}" Password="{x:Null}" ResourcesToArchive="{x:Null}" SecurePassword="{x:Null}" AllowDuplicateContentNames="False" CodePage="Default" CompressedFileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;OrganizedFiles.zip&quot;)]" CompressionLevel="Normal" DisplayName="Compress Organized Files" EncryptionAlgorithm="Classic" sap:VirtualizedContainerService.HintSize="483.2,220" sap2010:WorkflowViewState.IdRef="CompressFiles_1" OverrideExistingFile="True">
-      <uascw:CompressFiles.ContentToArchive>
-        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
-          <InArgument x:TypeArguments="x:String">[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Organized&quot;)]</InArgument>
-        </scg:List>
-      </uascw:CompressFiles.ContentToArchive>
-    </uascw:CompressFiles>
-    <ui:MessageBox Caption="File Management Automation" ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" DisplayName="Show Completion Message" sap:VirtualizedContainerService.HintSize="483.2,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Files organized and compressed to: &quot; + System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;OrganizedFiles.zip&quot;)]" />
+    <Assign DisplayName="Build Local Email Summary">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[summary]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["Processed unread test messages: " &amp; processedCount.ToString() &amp; Environment.NewLine &amp; "Keyword matches: " &amp; keywordMatches.ToString() &amp; Environment.NewLine &amp; "Attachments saved: " &amp; attachmentsSaved.ToString() &amp; Environment.NewLine &amp; "Reply drafts created: " &amp; draftsCreated.ToString() &amp; Environment.NewLine &amp; "Safety: local .eml fixtures only; no messages sent or deleted."]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Email Processing Summary" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;EmailSummary.txt&quot;)]" Text="[summary]" />
   </Sequence>
 </Activity>
+

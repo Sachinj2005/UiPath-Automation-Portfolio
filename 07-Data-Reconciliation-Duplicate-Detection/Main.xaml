@@ -1,117 +1,48 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
-      <x:String>System.Activities</x:String>
-      <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
-      <x:String>Microsoft.VisualBasic</x:String>
-      <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
-      <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Data</x:String>
-      <x:String>System.Diagnostics</x:String>
-      <x:String>System.Drawing</x:String>
       <x:String>System.IO</x:String>
       <x:String>System.Linq</x:String>
-      <x:String>System.Net.Mail</x:String>
-      <x:String>System.Xml</x:String>
-      <x:String>System.Xml.Linq</x:String>
-      <x:String>UiPath.Core</x:String>
-      <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
-      <x:String>UiPath.Platform.ResourceHandling</x:String>
-      <x:String>System.Reflection</x:String>
-      <x:String>System.Linq.Expressions</x:String>
-      <x:String>System.Runtime.Serialization</x:String>
-      <x:String>System.Numerics</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <sco:Collection x:TypeArguments="AssemblyReference">
-      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System.Data.Common</AssemblyReference>
-      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Drawing.Common</AssemblyReference>
-      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
-      <AssemblyReference>System.Linq</AssemblyReference>
-      <AssemblyReference>System.Net.Mail</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
-      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
-      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.ComponentModel</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Private.Uri</AssemblyReference>
-      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Collections</AssemblyReference>
-      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
-      <AssemblyReference>System.CodeDom</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
-      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
-      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
-      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="493.20000000000005,429.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Data Reconciliation And Duplicate Detection">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="variable1" />
-      <Variable x:TypeArguments="x:String" Name="matched" />
-      <Variable x:TypeArguments="x:String" Name="mismatched" />
-      <Variable x:TypeArguments="x:String" Name="duplicates" />
+      <Variable x:TypeArguments="x:String" Name="inputA" />
+      <Variable x:TypeArguments="x:String" Name="inputB" />
+      <Variable x:TypeArguments="x:String" Name="matchedCsv" />
+      <Variable x:TypeArguments="x:String" Name="mismatchedCsv" />
+      <Variable x:TypeArguments="x:String" Name="duplicateCsv" />
       <Variable x:TypeArguments="x:String" Name="summary" />
     </Sequence.Variables>
-    <sap:WorkflowViewStateService.ViewState>
-      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-      </scg:Dictionary>
-    </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadTextFile File="{x:Null}" Content="[variable1]" DisplayName="Read Dataset A" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Input&quot;, &quot;Employees_A.csv&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,123.2" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[matched]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[&quot;EmployeeId,Name,Department,Salary&quot; + Environment.NewLine + &quot;E001,Asha Patel,Engineering,75000&quot; + Environment.NewLine + &quot;E004,John Smith,Sales,59000&quot;]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_Mismatched"><Assign.To><OutArgument x:TypeArguments="x:String">[mismatched]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[&quot;EmployeeId,Field,DatasetA,DatasetB&quot; + Environment.NewLine + &quot;E002,Salary,68000,70000&quot;]</InArgument></Assign.Value></Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_Duplicates"><Assign.To><OutArgument x:TypeArguments="x:String">[duplicates]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[&quot;EmployeeId,Occurrences&quot; + Environment.NewLine + &quot;E003,2&quot;]</InArgument></Assign.Value></Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_Summary"><Assign.To><OutArgument x:TypeArguments="x:String">[summary]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[&quot;Dataset A records: 5&quot; + Environment.NewLine + &quot;Dataset B records: 4&quot; + Environment.NewLine + &quot;Matched IDs: 2&quot; + Environment.NewLine + &quot;Mismatched IDs: 1&quot; + Environment.NewLine + &quot;Missing from B: 1&quot; + Environment.NewLine + &quot;Duplicate IDs in A: 1&quot;]</InArgument></Assign.Value></Assign>
-    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" DisplayName="Ensure Output Folder" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="CreateOutput" />
-    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Matched Records" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;MatchedRecords.csv&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteMatched" Text="[matched]" />
-    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Mismatched Records" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;MismatchedRecords.csv&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteMismatched" Text="[mismatched]" />
-    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Duplicate Records" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;DuplicateRecords.csv&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteDuplicates" Text="[duplicates]" />
-    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Reconciliation Summary" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;Summary.txt&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteSummary" Text="[summary]" />
+    <ui:ReadTextFile File="{x:Null}" Content="[inputA]" DisplayName="Read Dataset A" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Input&quot;, &quot;Employees_A.csv&quot;)]" />
+    <ui:ReadTextFile File="{x:Null}" Content="[inputB]" DisplayName="Read Dataset B" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Input&quot;, &quot;Employees_B.csv&quot;)]" />
+    <ui:InvokeCode Code="Dim linesA = inputA.Replace(vbCrLf, vbLf).Replace(vbCr, vbLf).Split(New String() {vbLf}, StringSplitOptions.RemoveEmptyEntries)&#xA;Dim linesB = inputB.Replace(vbCrLf, vbLf).Replace(vbCr, vbLf).Split(New String() {vbLf}, StringSplitOptions.RemoveEmptyEntries)&#xA;Dim recordsA As New Dictionary(Of String, List(Of String()))(StringComparer.OrdinalIgnoreCase)&#xA;Dim recordsB As New Dictionary(Of String, List(Of String()))(StringComparer.OrdinalIgnoreCase)&#xA;&#xA;For i As Integer = 1 To linesA.Length - 1&#xA;    Dim fields = linesA(i).Split(&quot;,&quot;c)&#xA;    If fields.Length &gt;= 4 AndAlso fields(0).Trim() &lt;&gt; &quot;&quot; Then&#xA;        Dim id = fields(0).Trim()&#xA;        If Not recordsA.ContainsKey(id) Then recordsA(id) = New List(Of String())&#xA;        recordsA(id).Add(fields)&#xA;    End If&#xA;Next&#xA;For i As Integer = 1 To linesB.Length - 1&#xA;    Dim fields = linesB(i).Split(&quot;,&quot;c)&#xA;    If fields.Length &gt;= 4 AndAlso fields(0).Trim() &lt;&gt; &quot;&quot; Then&#xA;        Dim id = fields(0).Trim()&#xA;        If Not recordsB.ContainsKey(id) Then recordsB(id) = New List(Of String())&#xA;        recordsB(id).Add(fields)&#xA;    End If&#xA;Next&#xA;&#xA;Dim allIds As New HashSet(Of String)(StringComparer.OrdinalIgnoreCase)&#xA;For Each id As String In recordsA.Keys&#xA;    allIds.Add(id)&#xA;Next&#xA;For Each id As String In recordsB.Keys&#xA;    allIds.Add(id)&#xA;Next&#xA;&#xA;Dim matchedRows As New List(Of String)&#xA;Dim mismatchRows As New List(Of String)&#xA;Dim duplicateRows As New List(Of String)&#xA;Dim matchedIds As Integer = 0&#xA;Dim mismatchedIds As Integer = 0&#xA;Dim missingFromB As Integer = 0&#xA;Dim missingFromA As Integer = 0&#xA;Dim duplicateA As Integer = 0&#xA;Dim duplicateB As Integer = 0&#xA;&#xA;For Each id As String In allIds&#xA;    If recordsA.ContainsKey(id) AndAlso recordsB.ContainsKey(id) Then&#xA;        Dim rowA = recordsA(id)(0)&#xA;        Dim rowB = recordsB(id)(0)&#xA;        Dim equal As Boolean = True&#xA;        Dim fieldNames = New String() {&quot;Name&quot;, &quot;Department&quot;, &quot;Salary&quot;}&#xA;        For fieldIndex As Integer = 1 To 3&#xA;            If Not String.Equals(rowA(fieldIndex).Trim(), rowB(fieldIndex).Trim(), StringComparison.OrdinalIgnoreCase) Then&#xA;                equal = False&#xA;                mismatchRows.Add(id &amp; &quot;,&quot; &amp; fieldNames(fieldIndex - 1) &amp; &quot;,&quot; &amp; rowA(fieldIndex).Trim() &amp; &quot;,&quot; &amp; rowB(fieldIndex).Trim())&#xA;            End If&#xA;        Next&#xA;        If equal Then&#xA;            matchedIds += 1&#xA;            matchedRows.Add(id &amp; &quot;,&quot; &amp; rowA(1).Trim() &amp; &quot;,&quot; &amp; rowA(2).Trim() &amp; &quot;,&quot; &amp; rowA(3).Trim())&#xA;        Else&#xA;            mismatchedIds += 1&#xA;        End If&#xA;    ElseIf recordsA.ContainsKey(id) Then&#xA;        missingFromB += 1&#xA;        Dim rowA = recordsA(id)(0)&#xA;        mismatchRows.Add(id &amp; &quot;,MissingFromB,&quot; &amp; rowA(1).Trim() &amp; &quot;|&quot; &amp; rowA(2).Trim() &amp; &quot;|&quot; &amp; rowA(3).Trim() &amp; &quot;,&quot;)&#xA;    Else&#xA;        missingFromA += 1&#xA;        Dim rowB = recordsB(id)(0)&#xA;        mismatchRows.Add(id &amp; &quot;,MissingFromA,,&quot; &amp; rowB(1).Trim() &amp; &quot;|&quot; &amp; rowB(2).Trim() &amp; &quot;|&quot; &amp; rowB(3).Trim())&#xA;    End If&#xA;Next&#xA;&#xA;For Each pair In recordsA&#xA;    If pair.Value.Count &gt; 1 Then&#xA;        duplicateA += 1&#xA;        duplicateRows.Add(pair.Key &amp; &quot;,DatasetA,&quot; &amp; pair.Value.Count.ToString())&#xA;    End If&#xA;Next&#xA;For Each pair In recordsB&#xA;    If pair.Value.Count &gt; 1 Then&#xA;        duplicateB += 1&#xA;        duplicateRows.Add(pair.Key &amp; &quot;,DatasetB,&quot; &amp; pair.Value.Count.ToString())&#xA;    End If&#xA;Next&#xA;&#xA;matchedCsv = &quot;EmployeeId,Name,Department,Salary&quot;&#xA;If matchedRows.Count &gt; 0 Then matchedCsv &amp;= Environment.NewLine &amp; String.Join(Environment.NewLine, matchedRows)&#xA;mismatchedCsv = &quot;EmployeeId,Field,DatasetA,DatasetB&quot;&#xA;If mismatchRows.Count &gt; 0 Then mismatchedCsv &amp;= Environment.NewLine &amp; String.Join(Environment.NewLine, mismatchRows)&#xA;duplicateCsv = &quot;EmployeeId,Dataset,Occurrences&quot;&#xA;If duplicateRows.Count &gt; 0 Then duplicateCsv &amp;= Environment.NewLine &amp; String.Join(Environment.NewLine, duplicateRows)&#xA;&#xA;summary = &quot;Dataset A records: &quot; &amp; (linesA.Length - 1).ToString() &amp; Environment.NewLine &amp;&#xA;          &quot;Dataset B records: &quot; &amp; (linesB.Length - 1).ToString() &amp; Environment.NewLine &amp;&#xA;          &quot;Matched IDs: &quot; &amp; matchedIds.ToString() &amp; Environment.NewLine &amp;&#xA;          &quot;Mismatched IDs: &quot; &amp; mismatchedIds.ToString() &amp; Environment.NewLine &amp;&#xA;          &quot;Missing from B: &quot; &amp; missingFromB.ToString() &amp; Environment.NewLine &amp;&#xA;          &quot;Missing from A: &quot; &amp; missingFromA.ToString() &amp; Environment.NewLine &amp;&#xA;          &quot;Duplicate IDs in A: &quot; &amp; duplicateA.ToString() &amp; Environment.NewLine &amp;&#xA;          &quot;Duplicate IDs in B: &quot; &amp; duplicateB.ToString()" DisplayName="Compare Records And Detect Duplicates">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="inputA">[inputA]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="inputB">[inputB]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="matchedCsv">[matchedCsv]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="mismatchedCsv">[mismatchedCsv]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="duplicateCsv">[duplicateCsv]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="summary">[summary]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" DisplayName="Ensure Output Folder" />
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Matched Records" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;MatchedRecords.csv&quot;)]" Text="[matchedCsv]" />
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Mismatched Records" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;MismatchedRecords.csv&quot;)]" Text="[mismatchedCsv]" />
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Duplicate Records" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;DuplicateRecords.csv&quot;)]" Text="[duplicateCsv]" />
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Reconciliation Summary" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;Summary.txt&quot;)]" Text="[summary]" />
   </Sequence>
 </Activity>
+

@@ -1,0 +1,5 @@
+From: local.user@example.com
+Subject: Student change request
+X-Test-Mailbox: true
+
+Safe alternate local test message. Do not send.

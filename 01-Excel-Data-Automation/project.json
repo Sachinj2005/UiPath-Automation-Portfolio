@@ -1,7 +1,7 @@
 {
-  "name": "01-Excel-Data-Automation",
+  "name": "01-CSV-Data-Processing",
   "projectId": "ff704ff1-2a38-4e5c-a29f-91aee264e7d8",
-  "description": "Process student CSV records, filter and sort scores, and generate summary outputs.",
+  "description": "Dynamically process student CSV records, filter and sort scores, and generate summary outputs.",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.System.Activities": "[25.10.3]"
@@ -10,7 +10,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "26.0.180.0",
-  "projectVersion": "2.0.2",
+  "projectVersion": "3.1.0",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
