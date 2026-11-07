@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:web="clr-namespace:UiPath.Web.Activities.Http;assembly=UiPath.Web.Activities" xmlns:webm="clr-namespace:UiPath.Web.Activities.Http.Models;assembly=UiPath.Web.Activities" xmlns:json="clr-namespace:UiPath.Web.Activities;assembly=UiPath.Web.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -56,6 +56,8 @@
       <AssemblyReference>System.Xml</AssemblyReference>
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
@@ -86,8 +88,20 @@
   <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="493.20000000000005,429.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="variable1" />
+      <Variable x:TypeArguments="x:String" Name="apiJson" />
+      <Variable x:TypeArguments="webm:HttpResponseSummary" Name="apiResponse" />
+      <Variable x:TypeArguments="njl:JArray" Name="apiArray" />
       <Variable x:TypeArguments="x:String" Name="report" />
       <Variable x:TypeArguments="x:String" Name="summary" />
+      <Variable x:TypeArguments="x:String" Name="sourceLabel" />
+      <Variable x:TypeArguments="x:String" Name="idValue" />
+      <Variable x:TypeArguments="x:String" Name="nameValue" />
+      <Variable x:TypeArguments="x:String" Name="usernameValue" />
+      <Variable x:TypeArguments="x:String" Name="emailValue" />
+      <Variable x:TypeArguments="x:String" Name="recordLine" />
+      <Variable x:TypeArguments="x:Boolean" Name="recordValid" />
+      <Variable x:TypeArguments="x:Int32" Name="validCount" />
+      <Variable x:TypeArguments="x:Int32" Name="incompleteCount" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -95,16 +109,61 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ReadTextFile File="{x:Null}" Content="[variable1]" DisplayName="Read Offline JSON Fixture" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Input&quot;, &quot;users-sample.json&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,123.2" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <web:NetHttpRequest ContinueOnError="[True]" DisplayName="GET JSONPlaceholder Users" Method="GET" RequestUrl="https://jsonplaceholder.typicode.com/users" Result="[apiResponse]" TimeoutInMiliseconds="[30000]" sap:VirtualizedContainerService.HintSize="449.6,123.2" sap2010:WorkflowViewState.IdRef="NetHttpRequest_1" />
+    <Assign DisplayName="Select Live Response or Offline Fallback" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_ApiJson">
       <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[report]</OutArgument>
+        <OutArgument x:TypeArguments="x:String">[apiJson]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[&quot;Id,Name,Username,Email,Valid&quot; + Environment.NewLine + &quot;1,Leanne Graham,Bret,leanne@example.com,True&quot; + Environment.NewLine + &quot;2,Ervin Howell,Antonette,ervin@example.com,True&quot; + Environment.NewLine + &quot;3,Incomplete User,,,False&quot;]</InArgument>
+        <InArgument x:TypeArguments="x:String">[If(apiResponse IsNot Nothing AndAlso CInt(apiResponse.StatusCode) = 200 AndAlso Not String.IsNullOrWhiteSpace(apiResponse.TextContent) AndAlso apiResponse.TextContent.Trim().StartsWith(&quot;[&quot;), apiResponse.TextContent, variable1)]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_Summary"><Assign.To><OutArgument x:TypeArguments="x:String">[summary]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[&quot;Records: 3&quot; + Environment.NewLine + &quot;Valid records: 2&quot; + Environment.NewLine + &quot;Incomplete records: 1&quot; + Environment.NewLine + &quot;Source: JSONPlaceholder-compatible offline fixture&quot;]</InArgument></Assign.Value></Assign>
+    <Assign DisplayName="Record Data Source" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_SourceLabel"><Assign.To><OutArgument x:TypeArguments="x:String">[sourceLabel]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[If(apiResponse IsNot Nothing AndAlso CInt(apiResponse.StatusCode) = 200 AndAlso apiJson &lt;&gt; variable1, &quot;Live API response (HTTP &quot; &amp; CInt(apiResponse.StatusCode).ToString &amp; &quot;)&quot;, &quot;Offline fixture fallback&quot;)]</InArgument></Assign.Value></Assign>
+    <TryCatch DisplayName="Parse JSON with Fixture Recovery" sap:VirtualizedContainerService.HintSize="449.6,300" sap2010:WorkflowViewState.IdRef="TryCatch_ParseJson">
+      <TryCatch.Try>
+        <json:DeserializeJsonArray DisplayName="Parse Users JSON" JsonArray="[apiArray]" JsonString="[apiJson]" sap:VirtualizedContainerService.HintSize="449.6,123.2" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" />
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="parseException" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Use Offline Fixture After Invalid Response" sap:VirtualizedContainerService.HintSize="400,250" sap2010:WorkflowViewState.IdRef="Sequence_ParseFallback">
+              <Assign DisplayName="Use Fixture JSON"><Assign.To><OutArgument x:TypeArguments="x:String">[apiJson]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[variable1]</InArgument></Assign.Value></Assign>
+              <Assign DisplayName="Record Invalid Response Fallback"><Assign.To><OutArgument x:TypeArguments="x:String">[sourceLabel]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[&quot;Offline fixture fallback (invalid API response)&quot;]</InArgument></Assign.Value></Assign>
+              <json:DeserializeJsonArray DisplayName="Parse Offline Fixture" JsonArray="[apiArray]" JsonString="[apiJson]" sap:VirtualizedContainerService.HintSize="449.6,123.2" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_Fallback" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <Assign DisplayName="Initialize Valid Count" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_ValidCount"><Assign.To><OutArgument x:TypeArguments="x:Int32">[validCount]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:Int32">[0]</InArgument></Assign.Value></Assign>
+    <Assign DisplayName="Initialize Incomplete Count" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_IncompleteCount"><Assign.To><OutArgument x:TypeArguments="x:Int32">[incompleteCount]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:Int32">[0]</InArgument></Assign.Value></Assign>
+    <Assign DisplayName="Create CSV Header" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_Header"><Assign.To><OutArgument x:TypeArguments="x:String">[report]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[&quot;Id,Name,Username,Email,Valid&quot;]</InArgument></Assign.Value></Assign>
+    <ForEach x:TypeArguments="njl:JToken" DisplayName="Validate and Extract Users" Values="[apiArray]" sap:VirtualizedContainerService.HintSize="449.6,400" sap2010:WorkflowViewState.IdRef="ForEach_User">
+      <ActivityAction x:TypeArguments="njl:JToken">
+        <ActivityAction.Argument>
+          <DelegateInArgument x:TypeArguments="njl:JToken" Name="user" />
+        </ActivityAction.Argument>
+        <Sequence DisplayName="Validate User Record" sap:VirtualizedContainerService.HintSize="400,350" sap2010:WorkflowViewState.IdRef="Sequence_User">
+          <Assign DisplayName="Extract ID"><Assign.To><OutArgument x:TypeArguments="x:String">[idValue]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[If(user(&quot;id&quot;) Is Nothing, &quot;&quot;, user(&quot;id&quot;).ToString)]</InArgument></Assign.Value></Assign>
+          <Assign DisplayName="Extract Name"><Assign.To><OutArgument x:TypeArguments="x:String">[nameValue]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[If(user(&quot;name&quot;) Is Nothing, &quot;&quot;, user(&quot;name&quot;).ToString)]</InArgument></Assign.Value></Assign>
+          <Assign DisplayName="Extract Username"><Assign.To><OutArgument x:TypeArguments="x:String">[usernameValue]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[If(user(&quot;username&quot;) Is Nothing, &quot;&quot;, user(&quot;username&quot;).ToString)]</InArgument></Assign.Value></Assign>
+          <Assign DisplayName="Extract Email"><Assign.To><OutArgument x:TypeArguments="x:String">[emailValue]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[If(user(&quot;email&quot;) Is Nothing, &quot;&quot;, user(&quot;email&quot;).ToString)]</InArgument></Assign.Value></Assign>
+          <Assign DisplayName="Validate Required Fields"><Assign.To><OutArgument x:TypeArguments="x:Boolean">[recordValid]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:Boolean">[Not String.IsNullOrWhiteSpace(idValue) AndAlso Not String.IsNullOrWhiteSpace(nameValue) AndAlso Not String.IsNullOrWhiteSpace(usernameValue) AndAlso Not String.IsNullOrWhiteSpace(emailValue)]</InArgument></Assign.Value></Assign>
+          <Assign DisplayName="Format CSV Record"><Assign.To><OutArgument x:TypeArguments="x:String">[recordLine]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[idValue.Replace(&quot;,&quot;, &quot; &quot;) &amp; &quot;,&quot; &amp; nameValue.Replace(&quot;,&quot;, &quot; &quot;) &amp; &quot;,&quot; &amp; usernameValue.Replace(&quot;,&quot;, &quot; &quot;) &amp; &quot;,&quot; &amp; emailValue.Replace(&quot;,&quot;, &quot; &quot;) &amp; &quot;,&quot; &amp; recordValid.ToString]</InArgument></Assign.Value></Assign>
+          <Assign DisplayName="Append CSV Record"><Assign.To><OutArgument x:TypeArguments="x:String">[report]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[report &amp; Environment.NewLine &amp; recordLine]</InArgument></Assign.Value></Assign>
+          <If Condition="[recordValid]" DisplayName="Count Validation Result">
+            <If.Then><Assign DisplayName="Increment Valid Count"><Assign.To><OutArgument x:TypeArguments="x:Int32">[validCount]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:Int32">[validCount + 1]</InArgument></Assign.Value></Assign></If.Then>
+            <If.Else><Assign DisplayName="Increment Incomplete Count"><Assign.To><OutArgument x:TypeArguments="x:Int32">[incompleteCount]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:Int32">[incompleteCount + 1]</InArgument></Assign.Value></Assign></If.Else>
+          </If>
+        </Sequence>
+      </ActivityAction>
+    </ForEach>
+    <Assign DisplayName="Build Execution Summary" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_Summary"><Assign.To><OutArgument x:TypeArguments="x:String">[summary]</OutArgument></Assign.To><Assign.Value><InArgument x:TypeArguments="x:String">[&quot;Records: &quot; &amp; apiArray.Count.ToString &amp; Environment.NewLine &amp; &quot;Valid records: &quot; &amp; validCount.ToString &amp; Environment.NewLine &amp; &quot;Incomplete records: &quot; &amp; incompleteCount.ToString &amp; Environment.NewLine &amp; &quot;Source: &quot; &amp; sourceLabel]</InArgument></Assign.Value></Assign>
     <ui:CreateDirectory ContinueOnError="False" Output="{x:Null}" Path="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" DisplayName="Ensure Output Folder" sap:VirtualizedContainerService.HintSize="449.6,122.4" sap2010:WorkflowViewState.IdRef="CreateOutput" />
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Live API Response" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;LiveApiResponse.json&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteApiResponse" Text="[apiJson]" />
     <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Users CSV" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;UsersReport.csv&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteReport" Text="[report]" />
     <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Execution Summary" FileName="[System.IO.Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;, &quot;Summary.txt&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteSummary" Text="[summary]" />
   </Sequence>

@@ -4,13 +4,14 @@
   "description": "Process JSON user data and generate validated CSV reports.",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.System.Activities": "[25.10.3]"
+    "UiPath.System.Activities": "[25.10.3]",
+    "UiPath.WebAPI.Activities": "[2.4.0]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "26.0.180.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.2.0",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
